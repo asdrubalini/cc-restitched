@@ -205,9 +205,9 @@ public class TileEntityMonitorRenderer extends BlockEntityRenderer<TileMonitor>
                 }
 
                 // Nobody knows what they're doing!
-                GlStateManager.activeTexture( MonitorTextureBufferShader.TEXTURE_INDEX );
+                GlStateManager.glActiveTexture( MonitorTextureBufferShader.TEXTURE_INDEX );
                 GL11.glBindTexture( GL31.GL_TEXTURE_BUFFER, monitor.tboTexture );
-                GlStateManager.activeTexture( GL13.GL_TEXTURE0 );
+                GlStateManager.glActiveTexture( GL13.GL_TEXTURE0 );
 
                 MonitorTextureBufferShader.setupUniform( matrix, width, height, terminal.getPalette(), !monitor.isColour() );
 
@@ -224,7 +224,7 @@ public class TileEntityMonitorRenderer extends BlockEntityRenderer<TileMonitor>
                     .next();
                 tessellator.draw();
 
-                GlStateManager.useProgram( 0 );
+                GlStateManager._glUseProgram( 0 );
                 break;
             }
 
