@@ -109,7 +109,7 @@ public class GuiComputer<T extends ContainerComputerBase> extends HandledScreen<
         terminal.draw( terminalWrapper.getX(), terminalWrapper.getY() );
 
         // Draw a border around the terminal
-        RenderSystem.color4f( 1, 1, 1, 1 );
+        // RenderSystem.color4f( 1, 1, 1, 1 );
         client.getTextureManager()
             .bindTexture( ComputerBorderRenderer.getTexture( family ) );
         ComputerBorderRenderer.render( terminalWrapper.getX() - MARGIN, terminalWrapper.getY() - MARGIN,
